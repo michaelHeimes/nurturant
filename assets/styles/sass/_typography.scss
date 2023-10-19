@@ -1,0 +1,32 @@
+h1,
+.h1 {
+	color: $color-turquiose;
+	a {
+		color: $color-turquiose;
+	}
+}
+h2,
+.h2,
+h3,
+.h3 {
+	color: $color-purple;
+	a {
+		color: $color-purple;
+	}
+}
+p.large {
+	font-size: rem-calc(19.2px);
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	&.light {
+		color: $white;
+	}
+}
+a {
+	color: $black;
+}
