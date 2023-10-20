@@ -1,0 +1,24 @@
+.cta-yellow-background-wicon-links {
+	background-image: linear-gradient(to bottom, $color-yellow, $color-lime);
+	.icon-wrap {
+		background-color: $color-turquiose;
+		border-radius: 100%;
+		max-width: 160px;
+		margin: auto;
+		box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+		.inner {
+			max-width: 154px;
+			margin: auto;
+			padding: 1rem;
+			img {
+				width: 100%;
+	
+			}
+		}
+	}	
+	.arrow-link {
+		display: inline-flex;
+		font-size: 1.5rem;
+		line-height: 1.3;
+	}
+}

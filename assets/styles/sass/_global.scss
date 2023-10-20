@@ -31,6 +31,24 @@ svg {
 	position: relative;
 }
 
+.button {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);;
+	&.large {
+		border-radius: 19px;
+		font-size: 1.2rem;
+	}
+}
+
+.arrow-link {
+	font-family: $font-serif;
+	font-size: 1.2rem;
+	line-height: 1.2;
+	display: flex;
+	> span {
+		margin-right: .5rem;	
+	}
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/

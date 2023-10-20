@@ -1,3 +1,20 @@
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+$FontPath: "../fonts/metropolis/Webfonts/";
+
+@font-face {
+  font-family: 'Metropolis';
+  src:  local('Metropolis'), local('Metropolis'), 
+		url('#{$FontPath}WOFF2/Metropolis-Regular.woff2') format('woff2'),
+		url('#{$FontPath}WOFF/Metropolis-Regular.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @charset "UTF-8";
 @import "variables";
 
@@ -48,14 +65,14 @@
 // Menu-based containers
 @include foundation-menu;
 //@include foundation-menu-icon;
-// @include foundation-accordion-menu;
-// @include foundation-drilldown-menu;
-// @include foundation-dropdown-menu;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
 
 // Layout components
 @include foundation-off-canvas;
 // @include foundation-reveal;
-// @include foundation-sticky;
+@include foundation-sticky;
 //@include foundation-title-bar;
 @include foundation-top-bar;
 
@@ -83,4 +100,7 @@
 
 // @import "_modules/page-modules";
 
-@import "_pages/home";
+@import "_modules/gradient_banner";
+@import "_modules/wysiwyg";
+@import "_modules/cta-yellow-background-wicon-links";
+@import "_modules/copy_left_image_right";

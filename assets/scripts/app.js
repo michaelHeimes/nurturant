@@ -29,16 +29,16 @@
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.abide.js
 
 // Accordian
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.accordion.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.accordionMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.accordion.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.accordionMenu.js
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveAccordionTabs.js
 
 // Menu enhancements
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.drilldown.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.dropdown.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.dropdownMenu.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveMenu.js
-//@*prepros-prepend vendor/foundation/js/plugins/foundation.responsiveToggle.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.drilldown.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.dropdown.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.dropdownMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.responsiveMenu.js
+//@prepros-prepend vendor/foundation/js/plugins/foundation.responsiveToggle.js
 
 // Equalize heights
 //@*prepros-prepend vendor/foundation/js/plugins/foundation.equalizer.js
@@ -126,6 +126,68 @@
     
     // Custom Functions
     
+    _app.desktop_nav_click_open_submenu = function() {
+
+        // Get all the anchor elements within li.menu-item-has-children
+        const menuItems = document.querySelectorAll('li.menu-item-has-children > a');
+        
+        // Add click event listeners to the anchor elements
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener('click', function (event) {
+                event.preventDefault();
+        
+                // Find the parent li and sibling ul.submenu
+                const parentLi = this.parentNode;
+                const submenu = parentLi.querySelector('ul.submenu');
+        
+                // Check if the parent li has the class .is-active
+                if (parentLi.classList.contains('is-active')) {
+                    // Remove .is-active and .js-dropdown-active from the parent li and its sibling submenu
+                    parentLi.classList.remove('is-active');
+                    if (submenu) {
+                        submenu.classList.remove('js-dropdown-active');
+                    }
+                } else {
+                    // Find siblings of the parent li
+                    const siblingLis = parentLi.parentNode.querySelectorAll('li.menu-item-has-children');
+        
+                    // Remove .is-active and .js-dropdown-active from all siblings
+                    siblingLis.forEach(function (siblingLi) {
+                        siblingLi.classList.remove('is-active');
+                        const siblingSubmenu = siblingLi.querySelector('ul.submenu');
+                        if (siblingSubmenu) {
+                            siblingSubmenu.classList.remove('js-dropdown-active');
+                        }
+                    });
+        
+                    // Add .is-active to the parent li and .js-dropdown-active to the submenu
+                    parentLi.classList.add('is-active');
+                    if (submenu) {
+                        submenu.classList.add('js-dropdown-active');
+                    }
+                }
+            });
+        });
+
+    }
+    
+    _app.make_square = function() {
+        // Function to make elements square
+        const makeSquare = function() {
+            const squareElements = document.querySelectorAll('.make-square');
+        
+            squareElements.forEach(function (element) {
+                const width = element.clientWidth;
+                element.style.height = `${width}px`;
+            });
+        }
+        
+        makeSquare();
+        
+        window.addEventListener('resize', makeSquare);
+
+    }
+    
     _app.mobile_takover_nav = function() {
         $(document).on('click', 'a#menu-toggle', function(){
             
@@ -152,7 +214,9 @@
         _app.display_on_load();
         
         // Custom Functions
+        _app.desktop_nav_click_open_submenu();
         //_app.mobile_takover_nav();
+        _app.make_square();
     }
     
     

@@ -43,7 +43,21 @@
 		</div>
 		<div class="top-bar-right show-for-tablet">
 			<div class="grid-x align-right">
+				<div class="cell auto">
+					<nav>
+						<?php nurturant_top_nav();?>
+					</nav>
+				</div>
 				<div class="cell shrink">
+					<?php 
+					$link = get_field('header_support_button_link', 'option');
+					if( $link ): 
+						$link_url = $link['url'];
+						$link_title = $link['title'];
+						$link_target = $link['target'] ? $link['target'] : '_self';
+						?>
+						<a class="button large" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
