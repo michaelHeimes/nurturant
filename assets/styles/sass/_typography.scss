@@ -1,8 +1,8 @@
 h1,
 .h1 {
-	color: $color-turquiose;
+	color: $color-turquoise;
 	a {
-		color: $color-turquiose;
+		color: $color-turquoise;
 	}
 }
 h2,
@@ -14,7 +14,10 @@ h3,
 		color: $color-purple;
 	}
 }
-p.large {
+p.large,
+.large p,
+.large ul,
+.large ol {
 	font-size: rem-calc(19.2px);
 }
 h1,
@@ -26,6 +29,12 @@ h3,
 	&.light {
 		color: $white;
 	}
+}
+p,
+.p,
+ul,
+ol {
+	
 }
 a {
 	color: $black;
@@ -42,7 +51,11 @@ a {
 	h3,
 	.h3,
 	p,
+	.p,
 	a {
 		color: $white;
 	}
+}
+.color-white {
+	color: $white;
 }

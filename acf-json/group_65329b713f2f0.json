@@ -292,8 +292,8 @@
                 },
                 {
                     "key": "field_65329cd871cd4",
-                    "label": "Buttons Links",
-                    "name": "buttons_links",
+                    "label": "Button Links",
+                    "name": "button_links",
                     "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
@@ -519,8 +519,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697827650
+    "modified": 1697999038
 }

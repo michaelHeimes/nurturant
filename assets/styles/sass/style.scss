@@ -9,6 +9,26 @@ $FontPath: "../fonts/metropolis/Webfonts/";
   src:  local('Metropolis'), local('Metropolis'), 
 		url('#{$FontPath}WOFF2/Metropolis-Regular.woff2') format('woff2'),
 		url('#{$FontPath}WOFF/Metropolis-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src:  local('Metropolis'), local('Metropolis'), 
+    url('#{$FontPath}WOFF2/Metropolis-RegularItalic.woff2') format('woff2'),
+    url('#{$FontPath}WOFF/Metropolis-RegularItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src:  local('Metropolis'), local('Metropolis'), 
+    url('#{$FontPath}WOFF2/Metropolis-Bold.woff2') format('woff2'),
+    url('#{$FontPath}WOFF/Metropolis-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -95,6 +115,7 @@ $FontPath: "../fonts/metropolis/Webfonts/";
 @import "typography";
 @import "header";
 @import "footer";
+@import "helpers";
 
 // @import "_parts/banner";
 
@@ -104,3 +125,6 @@ $FontPath: "../fonts/metropolis/Webfonts/";
 @import "_modules/wysiwyg";
 @import "_modules/cta-yellow-background-wicon-links";
 @import "_modules/copy_left_image_right";
+@import "_modules/cta-copy-wbuttons-links";
+
+@import "_pages/team";

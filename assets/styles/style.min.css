@@ -6,6 +6,20 @@
 @font-face {
   font-family: "Metropolis";
   src: local("Metropolis"), local("Metropolis"), url("../fonts/metropolis/Webfonts/WOFF2/Metropolis-Regular.woff2") format("woff2"), url("../fonts/metropolis/Webfonts/WOFF/Metropolis-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: local("Metropolis"), local("Metropolis"), url("../fonts/metropolis/Webfonts/WOFF2/Metropolis-RegularItalic.woff2") format("woff2"), url("../fonts/metropolis/Webfonts/WOFF/Metropolis-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: local("Metropolis"), local("Metropolis"), url("../fonts/metropolis/Webfonts/WOFF2/Metropolis-Bold.woff2") format("woff2"), url("../fonts/metropolis/Webfonts/WOFF/Metropolis-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -3916,9 +3930,9 @@ ul.no-bullet, ol.no-bullet {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
+  padding: 0.602em 1.563em 0.482em;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 16px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-family: inherit;
@@ -3948,19 +3962,19 @@ ul.no-bullet, ol.no-bullet {
 }
 .button, .button.disabled, .button[disabled], .button.disabled:hover, .button[disabled]:hover, .button.disabled:focus, .button[disabled]:focus {
   background-color: #ff9b11;
-  color: white;
+  color: #771c7d;
 }
 .button:hover, .button:focus {
-  background-color: #e78600;
-  color: white;
+  background-color: black;
+  color: #771c7d;
 }
 .button.primary, .button.primary.disabled, .button.primary[disabled], .button.primary.disabled:hover, .button.primary[disabled]:hover, .button.primary.disabled:focus, .button.primary[disabled]:focus {
   background-color: #1779ba;
-  color: white;
+  color: #000;
 }
 .button.primary:hover, .button.primary:focus {
   background-color: #126195;
-  color: white;
+  color: #000;
 }
 .button.secondary, .button.secondary.disabled, .button.secondary[disabled], .button.secondary.disabled:hover, .button.secondary[disabled]:hover, .button.secondary.disabled:focus, .button.secondary[disabled]:focus {
   background-color: #767676;
@@ -4102,7 +4116,7 @@ ul.no-bullet, ol.no-bullet {
   top: 0.4em;
   display: inline-block;
   float: right;
-  margin-left: 1em;
+  margin-left: 1.563em;
 }
 .button.dropdown.hollow::after, .button.dropdown.clear::after {
   border-top-color: #ff9b11;
@@ -7356,6 +7370,9 @@ svg {
   border-radius: 19px;
   font-size: 1.2rem;
 }
+.button:hover {
+  color: white;
+}
 
 .arrow-link {
   font-family: "BioRhyme", serif;
@@ -7431,9 +7448,9 @@ POSTS & CONTENT STYLES
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
+  padding: 0.602em 1.563em 0.482em;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 16px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-family: inherit;
@@ -7448,11 +7465,11 @@ POSTS & CONTENT STYLES
 }
 .post-password-form input[type=submit], .post-password-form input[type=submit].disabled, .post-password-form input[type=submit][disabled], .post-password-form input[type=submit].disabled:hover, .post-password-form input[type=submit][disabled]:hover, .post-password-form input[type=submit].disabled:focus, .post-password-form input[type=submit][disabled]:focus {
   background-color: #ff9b11;
-  color: white;
+  color: #771c7d;
 }
 .post-password-form input[type=submit]:hover, .post-password-form input[type=submit]:focus {
-  background-color: #e78600;
-  color: white;
+  background-color: black;
+  color: #771c7d;
 }
 
 /*********************
@@ -7476,15 +7493,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-1 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 100%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-1 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-1 > dl, .gallery.gallery-columns-1 > dl:last-child:not(:first-child) {
@@ -7496,15 +7513,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-2 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 50%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-2 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-2 > dl, .gallery.gallery-columns-2 > dl:last-child:not(:first-child) {
@@ -7516,15 +7533,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-3 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 33.3333333333%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-3 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-3 > dl, .gallery.gallery-columns-3 > dl:last-child:not(:first-child) {
@@ -7536,15 +7553,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-4 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 25%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-4 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-4 > dl, .gallery.gallery-columns-4 > dl:last-child:not(:first-child) {
@@ -7556,15 +7573,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-5 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 20%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-5 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-5 > dl, .gallery.gallery-columns-5 > dl:last-child:not(:first-child) {
@@ -7576,15 +7593,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-6 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 16.6666666667%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-6 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-6 > dl, .gallery.gallery-columns-6 > dl:last-child:not(:first-child) {
@@ -7596,15 +7613,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-7 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 14.2857142857%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-7 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-7 > dl, .gallery.gallery-columns-7 > dl:last-child:not(:first-child) {
@@ -7616,15 +7633,15 @@ IMAGE GALLERY STYLES
 }
 
 .gallery.gallery-columns-8 > dl {
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 12.5%;
   float: left;
 }
 @media print, screen and (min-width: 40em) {
   .gallery.gallery-columns-8 > dl {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 .gallery.gallery-columns-8 > dl, .gallery.gallery-columns-8 > dl:last-child:not(:first-child) {
@@ -7857,7 +7874,10 @@ h3 a,
   color: #771c7d;
 }
 
-p.large {
+p.large,
+.large p,
+.large ul,
+.large ol {
   font-size: 1.2rem;
 }
 
@@ -7885,7 +7905,12 @@ a {
 .light h3,
 .light .h3,
 .light p,
+.light .p,
 .light a {
+  color: white;
+}
+
+.color-white {
   color: white;
 }
 
@@ -8009,6 +8034,14 @@ footer#colophon .copyright {
   }
 }
 
+.bg-purple {
+  background-color: #771c7d;
+}
+
+.bg-turquoise {
+  background-color: #0098a4;
+}
+
 .gradient-banner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0098a4), to(#771c7d));
   background-image: linear-gradient(to bottom, #0098a4, #771c7d);
@@ -8050,5 +8083,26 @@ footer#colophon .copyright {
 .copy-left-image-right {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#d82682), to(#771c7d));
   background-image: linear-gradient(to bottom, #d82682, #771c7d);
+}
+
+.cta-copy-wbuttons-links .inner {
+  border-radius: 24px;
+  padding: 2.875rem 2.5625rem 2.5rem;
+}
+.cta-copy-wbuttons-links .inner h2 {
+  margin-bottom: 0.45em;
+}
+
+.page-template-page-team .team-member {
+  margin-bottom: 8rem;
+}
+.page-template-page-team .team-member .top {
+  padding-bottom: 3.4rem;
+}
+.page-template-page-team .team-member .top h2.h3 {
+  margin-bottom: 1.155em;
+}
+.page-template-page-team .team-member .top p {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=style.min.css.map */

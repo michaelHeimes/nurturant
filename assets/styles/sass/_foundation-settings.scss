@@ -131,8 +131,8 @@ $breakpoint-classes: (small medium tablet large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: 32px,
+  medium: 32px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -297,14 +297,14 @@ $breadcrumbs-item-separator-color: $medium-gray;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 0.85em 1em;
+$button-padding: 0.602em 1.563em 0.482em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $color-orange;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-background-hover: scale-color($button-background, $lightness: -100%);
+$button-color: $color-purple;
 $button-color-alt: $black;
-$button-radius: $global-radius;
+$button-radius: 16px;
 $button-border: 1px solid transparent;
 $button-hollow-border-width: 1px;
 $button-sizes: (
