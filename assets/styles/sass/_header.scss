@@ -1,8 +1,32 @@
 header.site-header {
-	transition: transform .5s ease;
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top: 100%;
+		width: 100%;
+		height: 30px;
+		background: rgb(0,0,0.7);
+		background: linear-gradient(180deg, rgba(0,0,0,.07) 0%, rgba(0,0,0,0) 100%);
+
+	}
 	
 	#top-bar-menu {
+		height: rem-calc(136);
+			
+		.top-bar-left {
+			flex: 0 1 auto;
+			margin-left: auto;
+		}
 		
+		.top-bar-right {
+			flex: 1 1 auto;
+			margin-right: auto;
+			padding-left: 4.57rem;
+		}
+			
 		li.logo {
 			@include breakpoint(medium) {
 
@@ -18,32 +42,25 @@ header.site-header {
 		#main-nav {
 			align-items: center;
 			>li {
-				margin: 0 .3rem 0rem;
-				
+				margin: 0 0.45rem;
 				> a {
-					font-size: rem-calc(21);
+					font-size: rem-calc(19.2);
 					font-family: $font-sans;
-					text-transform: uppercase;
-					letter-spacing: 2.1px;
-					padding: 1.78rem 0.5rem 1.78rem;
-					position: relative;
+					font-weight: 600;
+					color: $color-purple;
+					display: flex;
+					align-items: center;
+					padding: 0.75rem 1rem 0.6rem;
+					
 					
 					@include breakpoint(tablet) {
-						font-size: rem-calc(14);
-						letter-spacing: 1.4px;
+						font-size: rem-calc(19.2);
 					}
 					
-					span {
-						&:before {
-							content: '';
-							width: calc(100% - 1rem);
-							position: absolute;
-							top: 0;
-							height: 11px;
-							background-color: transparent;
-						}
+					&:after {
+
 					}
-					
+
 				&:hover {
 
 				}
@@ -58,11 +75,88 @@ header.site-header {
 			}
 				
 			&.menu-item-has-children {
+				a:after {
+					content: '';
+					position: relative;
+					border: 0;
+					width: 14px;
+					height: 8px;
+					background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='12px' height='7px' viewBox='0 0 12 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3Eexpand_more_FILL0_wght300_GRAD0_opsz24%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='expand_more_FILL0_wght300_GRAD0_opsz24' transform='translate(0.660495, 0.640400)' fill='%23000000' fill-rule='nonzero'%3E%3Cpath d='M5.3395048,6.021125 C5.21898813,6.021125 5.10681313,6.00189167 5.0029798,5.963425 C4.8991298,5.92495833 4.80041313,5.85893333 4.7068298,5.76535 L0.212604797,1.271125 C0.0741381302,1.132675 0.00330479687,0.958641667 0,0.749025 C-0.0031118698,0.539408333 0.0677214635,0.362166667 0.212604797,0.2173 C0.357471464,0.0724333333 0.533104797,0 0.739504797,0 C0.945904797,0 1.12153813,0.0724333333 1.2664048,0.2173 L5.3395048,4.2904 L9.4126048,0.2173 C9.5510548,0.07885 9.72508813,0.00801666667 9.9347048,0.0048 C10.1443048,0.0016 10.3215381,0.0724333333 10.4664048,0.2173 C10.6112881,0.362166667 10.6837298,0.537808333 10.6837298,0.744225 C10.6837298,0.950625 10.6112881,1.12625833 10.4664048,1.271125 L5.9721798,5.76535 C5.87859646,5.85893333 5.7798798,5.92495833 5.6760298,5.963425 C5.57219646,6.00189167 5.46002146,6.021125 5.3395048,6.021125 Z' id='Path' fill='%23771c7d'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+					background-size: contain;
+					background-repeat: no-repeat;
+					margin: 0 0 0 10px;
+				}
+				
+			&.is-active {
+				a:after {
+					transform: rotateX(180deg);
+				}
+			}
 				
 				ul.submenu {
+					z-index: 2;
+					background-color: $color-pale-blue;
+					top: calc(100% + 2.99rem);
+					right: -13.33333%;
+					padding-bottom: 1.85rem;
+				
 					li {
+						
+					&.parent-duplicate {
 						a {
+							font-size: rem-calc(19.2);
+							font-weight: bold;
+							line-height: 1.2;
+							&:after {
+								display: none;	
+							}
+							span {
+								position: relative;
+								display: inline-flex;
+								align-items: center;
+							&:after {
+								content: '';
+								display: block;
+								position: absolute;
+								right: -33px;
+								width: 16px;
+								height: 12px;
+								background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='16px' height='12px' viewBox='0 0 16 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='arrow_right_alt_FILL0_wght300_GRAD0_opsz24' transform='translate(0.500025, 0.663228)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cpath d='M12.11155,6.08674663 L0.75,6.08674663 C0.537183333,6.08674663 0.358983333,6.01495496 0.2154,5.87137163 C0.0718,5.7277883 0,5.5495883 0,5.33677163 C0,5.12395496 0.0718,4.94575496 0.2154,4.80217163 C0.358983333,4.6585883 0.537183333,4.58679663 0.75,4.58679663 L12.11155,4.58679663 L8.8192,1.29444663 C8.67048333,1.14572996 8.59709167,0.971696631 8.599025,0.772346631 C8.60094167,0.572996631 8.67433333,0.395754964 8.8192,0.240621631 C8.97433333,0.0855049639 9.15253333,0.00537996395 9.3538,0.000246630616 C9.55508333,-0.00488670272 9.73328333,0.0701132973 9.8884,0.225246631 L14.36725,4.70409663 C14.4608333,4.79767996 14.5268583,4.89639663 14.565325,5.00024663 C14.6037917,5.10407996 14.623025,5.21625496 14.623025,5.33677163 C14.623025,5.4572883 14.6037917,5.5694633 14.565325,5.67329663 C14.5268583,5.77714663 14.4608333,5.8758633 14.36725,5.96944663 L9.8884,10.4482966 C9.7397,10.5970133 9.56310833,10.6704133 9.358625,10.6685332 C9.15414167,10.6665633 8.97433333,10.5880383 8.8192,10.4329216 C8.67433333,10.2777883 8.59933333,10.1021466 8.5942,9.90599663 C8.58908333,9.70984663 8.66408333,9.5342133 8.8192,9.37909663 L12.11155,6.08674663 Z' id='Path' fill='%23771c7d'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+								transform: translateX(-8px);
+								transition: .3s ease;
+							}
 
+							}
+							
+						&:hover {
+							span {
+								text-decoration: underline;
+							&:after {
+								transform: translateX(0);
+							}
+							}
+						}
+							
+						}
+					}
+						
+					&:first-child:before {
+						content: '';
+						display: block;
+						width: 100%;
+						height: 30px;
+						background: rgb(0,0,0.7);
+						background: linear-gradient(180deg, rgba(0,0,0,.07) 0%, rgba(0,0,0,0) 100%);
+					}	
+					
+						a {
+							padding: 0.4rem 2.45rem;
+							margin: 0.2rem 0;
+							font-size: 1rem;
+							font-weight: 600;
+							line-height: 1.5;
+							color: $color-purple;
+						
 							
 						&:hover {
 

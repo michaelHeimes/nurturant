@@ -384,7 +384,7 @@ $closebutton-color-hover: $black;
 // -------------
 
 $drilldown-transition: transform 0.15s linear;
-$drilldown-arrows: true;
+$drilldown-arrows: false;
 $drilldown-padding: $global-menu-padding;
 $drilldown-nested-margin: 0;
 $drilldown-background: $white;
@@ -421,7 +421,7 @@ $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 0px solid $medium-gray;
 $dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
@@ -498,8 +498,8 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
-$menu-item-color-alt-active: $black;
+$menu-item-color-active: get-color(primary);
+$menu-item-color-alt-active: get-color(primary);
 $menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;

@@ -19,9 +19,16 @@ get_header();
 						<div class="cell small-12 tablet-10 large-8">
 		
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							
+								
 								<header class="entry-header home-banner">
-									<h1><?php the_title();?></h1>
+									<h1>
+										<?php if( empty( get_field('title_override') ) ) {
+											the_title();
+										} else {
+											echo esc_attr( get_field('title_override') );
+										}
+										;?>	
+									</h1>
 								</header><!-- .entry-header -->
 							
 								<section class="entry-content" itemprop="text">
@@ -55,11 +62,11 @@ get_header();
 														echo '</div>';
 													}?>
 													<?php if( !empty( $fields['position'] ) || !empty( $fields['organization'] ) ):?>
-														<div class="cell small-12 tablet-10 large">
-															<p><b><?= esc_attr( $fields['position'] );?></b></p>
+														<div class="cell small-12 tablet-10">
+															<p class="small"><b><?= esc_attr( $fields['position'] );?></b></p>
 															<?php endif;?>
 															<?php if( !empty( $fields['organization'] ) ):?>
-															<p><i><?= esc_attr( $fields['organization'] );?></i></p>
+															<p class="small"><i><?= esc_attr( $fields['organization'] );?></i></p>
 														</div>
 													<?php endif;?>
 												</div>
@@ -79,7 +86,6 @@ get_header();
 								</section> <!-- end article section -->
 										
 								<footer class="article-footer">
-									<?php get_template_part( 'template-parts/content', 'page' );?>
 								</footer> <!-- end article footer -->
 									
 							</article><!-- #post-<?php the_ID(); ?> -->
