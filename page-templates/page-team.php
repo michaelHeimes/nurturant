@@ -15,12 +15,11 @@ get_header();
 
 			<main id="primary" class="site-main">
 				<div class="grid-container">
-					<div class="grid-x grid-padding-x align-center">
-						<div class="cell small-12 tablet-10 large-8">
-		
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								
-								<header class="entry-header home-banner">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						
+						<header class="entry-header home-banner">
+							<div class="grid-x grid-padding-x align-center">
+								<div class="cell small-12 tablet-10">
 									<h1>
 										<?php if( empty( get_field('title_override') ) ) {
 											the_title();
@@ -29,69 +28,82 @@ get_header();
 										}
 										;?>	
 									</h1>
-								</header><!-- .entry-header -->
+								</div>
+							</div>
+						</header><!-- .entry-header -->
+					
+						<section class="entry-content" itemprop="text">
+							<?php			
+							$args = array(  
+								'post_type' => 'team-member',
+								'post_status' => 'publish',
+								'posts_per_page' => -1,
+							);
 							
-								<section class="entry-content" itemprop="text">
-									<?php			
-									$args = array(  
-										'post_type' => 'team-member',
-										'post_status' => 'publish',
-										'posts_per_page' => -1,
-									);
-									
-									$loop = new WP_Query( $args ); 
-									
-									if ( $loop->have_posts() ) : 
+							$loop = new WP_Query( $args ); 
+							
+							if ( $loop->have_posts() ) : 
+								
+								while ( $loop->have_posts() ) : $loop->the_post();
+									$fields = get_fields();	
+								?>
+								
+								<div class="team-member">
+									<?php if( !empty( $fields['photo'] ) || !empty( $fields['position'] ) ):?>
+
+									<div class="top grid-x grid-padding-x align-middle align-center">
 										
-										while ( $loop->have_posts() ) : $loop->the_post();
-											$fields = get_fields();	
-										?>
+										<?php if( !empty( $fields['photo'] ) ) {
+											$imgID = $fields['photo']['ID'];
+											$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+											$img = wp_get_attachment_image( $imgID, 'team-photo', false, [ "class" => "", "alt"=>$img_alt] );
+											echo '<div class="cell small-12 tablet-2 photo-wrap">';
+											echo '<div class="inner">';
+											echo $img;
+											echo '</div>';
+											echo '</div>';
+										}?>
 										
-										<div class="team-member">
+										<div class="cell small-12 tablet-8">
 											<h2 class="h3">
 												<?php the_title();?>
 											</h2>
-											<?php if( !empty( $fields['photo'] ) || !empty( $fields['position'] ) ):?>
-												<div class="top grid-x grid-padding-x">
-													<?php if( !empty( $fields['photo'] ) ) {
-														$imgID = $fields['photo']['ID'];
-														$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
-														$img = wp_get_attachment_image( $imgID, 'team-photo', false, [ "class" => "", "alt"=>$img_alt] );
-														echo '<div class="cell small-12 tablet-2 photo-wrap">';
-														echo $img;
-														echo '</div>';
-													}?>
-													<?php if( !empty( $fields['position'] ) || !empty( $fields['organization'] ) ):?>
-														<div class="cell small-12 tablet-10">
-															<p class="small"><b><?= esc_attr( $fields['position'] );?></b></p>
-															<?php endif;?>
-															<?php if( !empty( $fields['organization'] ) ):?>
-															<p class="small"><i><?= esc_attr( $fields['organization'] );?></i></p>
-														</div>
+											<?php if( !empty( $fields['position'] ) || !empty( $fields['organization'] ) ):?>
+												<div class="cell small-12 tablet-10">
+													<p class="small"><b><?= esc_attr( $fields['position'] );?></b></p>
 													<?php endif;?>
+													<?php if( !empty( $fields['organization'] ) ):?>
+													<p class="small"><i><?= esc_attr( $fields['organization'] );?></i></p>
 												</div>
 											<?php endif;?>
+										</div>
+											
+									</div>
+									<?php endif;?>
+									
+									<div class="grid-x grid-padding-x align-center">
+										<div class="cell small-12 tablet-10">
 											<div class="bio large">
 												<?php the_content();?>
 											</div>
 										</div>
-											
-										<?php
-										endwhile;
+									</div>
 									
-									endif;
-									wp_reset_postdata(); 
-									?>
-			
-								</section> <!-- end article section -->
-										
-								<footer class="article-footer">
-								</footer> <!-- end article footer -->
+								</div>
 									
-							</article><!-- #post-<?php the_ID(); ?> -->
+								<?php
+								endwhile;
 							
-						</div>
-					</div>
+							endif;
+							wp_reset_postdata(); 
+							?>
+	
+						</section> <!-- end article section -->
+								
+						<footer class="article-footer">
+						</footer> <!-- end article footer -->
+							
+					</article><!-- #post-<?php the_ID(); ?> -->
 				</div>
 			</main><!-- #main -->
 				

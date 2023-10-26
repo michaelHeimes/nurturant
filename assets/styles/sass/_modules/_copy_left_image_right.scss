@@ -2,10 +2,19 @@
 	padding-top: rem-calc(25);
 	padding-bottom: rem-calc(12);
 	background-image: linear-gradient(to bottom, $color-magenta, $color-purple);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(47.5);
+		padding-bottom: rem-calc(47.5);
+	}
 	.arrow-links {
 		a {
 			display: inline-block;
 			margin-bottom: 1.2rem;
+			&:hover {
+				svg path {
+					fill: $color-yellow;	
+				}
+			}
 		}
 	}
 	.img-wrap {

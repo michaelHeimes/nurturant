@@ -168,6 +168,11 @@
             sliders.forEach(function (slider, index) {
                 const swiper = new Swiper(slider, {
                     slidesPerView: 'auto',
+                    navigation: {
+                        enabled: true,
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true

@@ -1,10 +1,42 @@
 .page-template-page-team {
+	article {
+		padding-top: rem-calc(35);
+		@include breakpoint(medium) {
+			padding-top: rem-calc(75);
+		}
+		header.entry-header {
+			padding-bottom: rem-calc(22);
+			@include breakpoint(medium) {
+				padding-bottom: rem-calc(54);
+			}
+		}
+	}
 	.team-member {
-		margin-bottom: 4rem;
+		margin-bottom: rem-calc(22);
+		@include breakpoint(medium) {
+			margin-bottom: rem-calc(48);
+		}
 		.top {
-			padding-bottom: 1.7rem;
+			@include breakpoint(medium down) {
+				margin-bottom: rem-calc(15);
+			}
+			@include breakpoint(tablet) {
+				padding-bottom: 23px;
+			}
+			
+			.photo-wrap {
+				.inner {
+					border-radius: 100%;
+					@include breakpoint(medium down) {
+						margin-bottom: 1rem;
+						img {
+							max-width: 136px;
+						}
+					}	
+				}
+			}
 			h2.h3 {
-				margin-bottom: 1.155em;
+				margin-bottom: .355em;
 			}
 			p {
 				margin-bottom: 0;

@@ -1,4 +1,8 @@
 .wysiwyg-editor {
 	padding-top: rem-calc(41.5);
 	padding-bottom: rem-calc(22);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(79.2);
+		padding-bottom: rem-calc(63);
+	}
 }

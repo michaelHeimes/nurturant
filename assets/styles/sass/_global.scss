@@ -3,9 +3,17 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-/*********************
-BACKGROUND COLORS
-*********************/
+
+.error404 {
+	main {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+		@include breakpoint(tablet) {
+			padding-top: 10rem;
+			padding-bottom: 10rem;
+		}
+	}
+}
 
 /*********************
 RE-USED ELEMENTS
@@ -36,6 +44,7 @@ svg {
 	&.large {
 		border-radius: 19px;
 		font-size: 1.2rem;
+		padding: 0.4114em 0.9356em;
 	}
 	&:hover {
 		color: $white;
@@ -48,8 +57,22 @@ svg {
 	line-height: 1.2;
 	display: flex;
 	> span {
-		margin-right: .5rem;	
+		margin-right: .7rem;	
 	}
+	svg{
+		transition: .3s ease;
+		transform: translateX(-.4375rem)
+		path {
+			transition: .3s ease;
+		}
+	}
+
+&:hover {
+	svg {
+		transform: translateX(0);
+	}
+}
+
 }
 
 /*********************

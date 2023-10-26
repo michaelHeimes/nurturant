@@ -1,20 +1,46 @@
 .logo-slider {
-	.swiper-slide {
-		img {
-			max-height: 122px;
-			width: auto;
-		}
+	padding-top: rem-calc(41.6);
+	padding-bottom: rem-calc(65.6);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(79);
 	}
-	.swiper-pagination {
-		position: static;
-		.swiper-pagination-bullet {
-			width: rem-calc(8);
-			height: rem-calc(8);
-			background-color: rgba($color-magenta, .4);
-			margin: .5rem;
-		&.swiper-pagination-bullet-active {
-			background-color: $color-magenta;
+	.logo-slider-swiper {
+		padding: 0 2rem;
+		.swiper-slide {
+			img {
+				max-height: 122px;
+				width: auto;
+			}
 		}
+		.swiper-nav {
+			background: $white;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+			margin: 0;
+			&.swiper-button-prev {
+				left: -34px;
+			}
+			&.swiper-button-next {
+				right: -34px;
+			}
+		}
+		.swiper-pagination {
+			position: static;
+			padding-top: 0.5rem;
+			.swiper-pagination-bullet {
+				width: rem-calc(8);
+				height: rem-calc(8);
+				background-color: rgba($color-magenta, .4);
+				margin: .5rem;
+				@include breakpoint(medium) {
+					width: rem-calc(16);
+					height: rem-calc(16);
+				}
+			&.swiper-pagination-bullet-active {
+				background-color: $color-magenta;
+			}
+			}
 		}
 	}
 }

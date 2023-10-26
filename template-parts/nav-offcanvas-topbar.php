@@ -30,7 +30,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 		
-			<ul class="menu">
+			<ul class="menu h-100 grid-x align-middle">
 				<li class="logo"><a href="<?php echo home_url(); ?>">
 					<?php 
 					$image = get_field('header_logo', 'option');
@@ -42,7 +42,7 @@
 						
 		</div>
 		<div class="top-bar-right show-for-tablet">
-			<div class="grid-x align-justify align-middle">
+			<div class="grid-x align-justify align-middle h-100">
 				<div class="cell auto">
 					<nav>
 						<?php nurturant_top_nav();?>

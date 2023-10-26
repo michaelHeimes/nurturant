@@ -1,5 +1,16 @@
 footer#colophon {
-
+	padding-top: rem-calc(32);
+	padding-bottom: rem-calc(15);
+	p,
+	.p {
+		font-size: rem-calc(14.4);	
+	}
+	.top {
+		padding-bottom: rem-calc(22);
+	}
+	.logo {
+		padding-bottom: rem-calc(34);
+	}
 	.site-info {
 
 	}
@@ -13,19 +24,29 @@ footer#colophon {
 	}
 		
 	ul#footer-links {
+		@include breakpoint(small down) {
+			align-items: center;
+		}
 		@include breakpoint(medium down) {
 			padding-bottom: 4.08rem;
 		}
 		li {
 			a {
-				font-size: rem-calc(14);
-				line-height: rem-calc(19);
 				font-weight: bold;
-				text-transform: uppercase;
+				font-size: rem-calc(16);
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 	}
-	
+	.sponsor-logo {
+		padding-bottom: rem-calc(13);
+		img {
+			max-width: 64px;	
+		}
+	}
 	.copyright {
 		margin-bottom: 0;
 		@include breakpoint(medium down) {

@@ -19,12 +19,12 @@
 									$imgID = get_field('footer_logo', 'option')['ID'];
 									$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 									$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-									echo '<div class="cell small-12 medium-6 tablet-2">';
+									echo '<div class="logo cell small-12 medium-6 tablet-2 text-center medium-text-left">';
 									echo $img;
 									echo '</div>';
 								}?>
 								<?php if(wp_get_nav_menu_items(get_nav_menu_locations()['footer-links'])): ?>
-								<div class="cell small-12 medium-6 tablet-3 tablet-offset-1">
+								<div class="cell small-12 medium-6 tablet-3 large-offset-1">
 									<?php nurturant_footer_links();?>
 								</div>
 								<?php endif;?>
@@ -33,19 +33,19 @@
 										$imgID = get_field('sponsor_logo', 'option')['ID'];
 										$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 										$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-										echo '<div class="cell small-12 medium-6 tablet-2">';
+										echo '<div class="sponsor-logo cell small-12 medium-shrink text-center large-text-left">';
 										echo $img;
 										echo '</div>';
 									}
 									if(!empty( get_field('sponsor_copy', 'option') ) ) {
-										echo '<div class="cell small-12 medium-6 tablet-6">';
+										echo '<div class="sponsor-copy cell small-12 medium-auto">';
 										the_field('sponsor_copy', 'option');
 										echo '</div>';
 									}
 								};?>
 							</div>
 							<div class="bottom grid-x grid-padding-x light">
-								<div class="cell small-12">
+								<div class="cell small-12 text-center medium-text-left">
 									<p>
 										<?php if( get_field('contact_info','option') ):?>
 										<div class="p">

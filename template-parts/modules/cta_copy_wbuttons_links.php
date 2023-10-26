@@ -34,7 +34,7 @@
 								echo ' medium-6 tablet-shrink';
 							};?>
 						">
-							<div class="grid-x grid-padding-x">
+							<div class="btns-wrap grid-x grid-padding-x">
 								<?php foreach($button_links as $button_link):
 									$link = $button_link['link'];
 									if( $link ): 

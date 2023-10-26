@@ -15,7 +15,7 @@ header.site-header {
 	
 	#top-bar-menu {
 		height: rem-calc(73);
-		@include breakpoint(medium) {
+		@include breakpoint(tablet) {
 			height: rem-calc(136);
 		}
 		

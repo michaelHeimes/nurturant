@@ -32,8 +32,8 @@
 						$imgID = $icon['ID'];
 						$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
 						$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
-						echo '<div class="icon-wrap grid-x align-middle align-center make-square">';
-						echo '<div class="inner">';
+						echo '<div class="icon-wrap relative grid-x align-middle align-center make-square">';
+						echo '<div class="inner relative">';
 						echo $img;
 						echo '</div>';
 						echo '</div>';

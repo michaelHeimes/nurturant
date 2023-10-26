@@ -13,8 +13,11 @@
 			<?php endif;?>
 			<?php if( !empty( $logos ) ):?>
 			<div class="cell small-12">
-				<div class="logo-slider-swiper">
-					<div class="swiper-container overflow-hidden">
+				<div class="logo-slider-swiper overflow-hidden">
+					<div class="swiper-container relative">
+						<div class="swiper-nav swiper-button-prev">
+							
+						</div>
 						<div class="swiper-wrapper align-middle small-up-1 medium-up-2 tablet-up-4">
 							<?php foreach($logos as $logo):?>
 								<?php if( !empty( $logo ) ) {
@@ -27,8 +30,9 @@
 								}?>
 							<?php endforeach;?>
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-nav swiper-button-next"></div>
 					</div>
+					<div class="swiper-pagination"></div>
 				</div>
 			</div>
 			<?php endif;?>
