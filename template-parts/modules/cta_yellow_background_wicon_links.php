@@ -13,19 +13,19 @@
 		</div>
 		<?php endif;?>
 		<?php if( !empty( $ctas ) ):?>
-		<div class="grid-x grid-padding-x">
+		<div class="grid-x grid-padding-x align-center small-up-2 medium-up-3 tablet-up-4">
 			<?php foreach($ctas as $cta):
 				$icon = $cta['icon'];
 				$link = $cta['link'];	
 			?>
-			<div class="cell small-12 medium-6 tablet-3 text-center">
+			<div class="cell text-center">
 				<?php 
 				if( $link ): 
 					$link_url = $link['url'];
 					$link_title = $link['title'];
 					$link_target = $link['target'] ? $link['target'] : '_self';
 					?>
-					<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+					<a class="color-black" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
 				<?php endif; ?>
 
 					<?php if( !empty( $icon ) ) {

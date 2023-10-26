@@ -1,3 +1,8 @@
 .gradient-banner {
+	padding-top: rem-calc(39.2);
+	padding-bottom: rem-calc(42);
 	background-image: linear-gradient(to bottom, ($color-turquoise), ($color-purple));
+	.left {
+		padding-bottom: 1.38rem;
+	}
 }

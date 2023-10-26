@@ -1,9 +1,25 @@
 .cta-copy-wbuttons-links {
+	margin-top: rem-calc(40);
+	margin-bottom: rem-calc(40);
 	.inner {
 		border-radius: 24px;
-		padding: rem-calc(46) rem-calc(41) rem-calc(40);
+		padding: rem-calc(17) rem-calc(16) rem-calc(0);
+		@include breakpoint(medium) {
+			padding: rem-calc(46) rem-calc(41) rem-calc(40);
+		}
 		h2 {
 			margin-bottom: 0.45em;
 		}
+		a.button {
+			width: 100%;
+		}
 	}
+	
+&.ntm {
+	margin-top: 0;
+}
+&.nbm {
+	margin-bottom: 0;
+}
+	
 }

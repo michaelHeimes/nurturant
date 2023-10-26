@@ -20,12 +20,14 @@
 									$link_title = $link['title'];
 									$link_target = $link['target'] ? $link['target'] : '_self';
 									?>
+								<div>
 									<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-										<span class="arrow-link align-middle">
-											<span><?php echo esc_html( $link_title ); ?></span>
+										<span class="arrow-link align-middle font-sans">
+											<span><b><?php echo esc_html( $link_title ); ?></b></span>
 											<?php get_template_part('template-parts/svg', 'right-arrow-light');?>
 										</span>
 									</a>
+								</div>
 								<?php endif;
 								
 							endforeach;?>
@@ -40,7 +42,9 @@
 				$img = wp_get_attachment_image( $imgID, 'full', false, [ "class" => "", "alt"=>$img_alt] );
 				echo '<div class="cell small-12 medium-6">';
 				echo '<div class="img-wrap">';
+				echo '<div class="inner">';
 				echo $img;
+				echo '</div>';
 				echo '</div>';
 				echo '</div>';
 			}?>

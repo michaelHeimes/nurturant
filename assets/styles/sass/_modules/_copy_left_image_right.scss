@@ -1,3 +1,19 @@
 .copy-left-image-right {
+	padding-top: rem-calc(25);
+	padding-bottom: rem-calc(12);
 	background-image: linear-gradient(to bottom, $color-magenta, $color-purple);
+	.arrow-links {
+		a {
+			display: inline-block;
+			margin-bottom: 1.2rem;
+		}
+	}
+	.img-wrap {
+		box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.2);
+		border-radius: 26px;
+		.inner {
+			border-radius: 26px;
+			overflow: hidden;
+		}
+	}
 }

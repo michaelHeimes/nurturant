@@ -48,6 +48,9 @@ a {
 }
 }
 
+.font-sans {
+	font-family: $font-sans;
+}
 .font-serif {
 	font-family: $font-serif;
 }
@@ -68,7 +71,12 @@ a {
 .color-white {
 	color: $white;
 }
-
+.color-black {
+	color: $black;
+}
+.color-purple {
+	color: $color-purple;
+}
 .download-link {
 	display: inline-flex;
 	align-items: center;

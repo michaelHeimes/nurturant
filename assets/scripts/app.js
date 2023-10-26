@@ -159,6 +159,24 @@
             
         });
     }
+        
+    _app.logo_slider = function() {
+        if( document.querySelector( '.logo-slider-swiper' ) ) {
+            
+            const sliders = document.querySelectorAll('.logo-slider-swiper .swiper-container');            
+            
+            sliders.forEach(function (slider, index) {
+                const swiper = new Swiper(slider, {
+                    slidesPerView: 'auto',
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                });  
+            });
+            
+        }
+    }
             
     _app.init = function() {
         
@@ -171,6 +189,7 @@
         // Custom Functions
         //_app.mobile_takover_nav();
         _app.make_square();
+        _app.logo_slider();
     }
     
     

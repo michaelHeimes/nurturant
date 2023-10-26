@@ -271,6 +271,46 @@
                     "layout": "horizontal"
                 },
                 {
+                    "key": "field_6539bcefe956d",
+                    "label": "Remove Top Margin",
+                    "name": "remove_top_margin",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6539bcfee956e",
+                    "label": "Remove Bottom Margin",
+                    "name": "remove_bottom_margin",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_65329cce71cd3",
                     "label": "Copy",
                     "name": "copy",
@@ -379,7 +419,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -420,7 +460,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -433,7 +473,7 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "preview_size": "medium"
+                    "preview_size": "thumbnail"
                 }
             ]
         },
@@ -522,5 +562,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697999038
+    "modified": 1698284604
 }

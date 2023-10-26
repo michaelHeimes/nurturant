@@ -14,22 +14,30 @@ header.site-header {
 	}
 	
 	#top-bar-menu {
-		height: rem-calc(136);
+		height: rem-calc(73);
+		@include breakpoint(medium) {
+			height: rem-calc(136);
+		}
+		
+		.top-bar-left,
+		.top-bar-right {
+			height: 100%;
+		}
 			
 		.top-bar-left {
 			flex: 0 1 auto;
-			margin-left: auto;
+			margin-right: auto;
 		}
 		
 		.top-bar-right {
 			flex: 1 1 auto;
-			margin-right: auto;
+			margin-left: auto;
 			padding-left: 4.57rem;
 		}
 			
 		li.logo {
-			@include breakpoint(medium) {
-
+			@include breakpoint(medium down) {
+				max-width: 206px;
 			}
 			@include breakpoint(tablet) {
 
@@ -178,38 +186,37 @@ header.site-header {
 		    
 		    a#menu-toggle {
 			    padding: 0;
-			    width: 36px;
-			    height: 36px;
+			    width: 28px;
+			    height: 28px;
 			    position: relative;
 			    
 			    span {
 				    position: absolute;
-				    left: 0;
+				    left: 2px;
 				    right: 0;
-				    width: 36px;
-				    height: 4px;
-				    background-color: $white;
+				    width: 24px;
+				    height: 2.1px;
+				    background-color: $color-purple;
 					transition: all .3s ease;
 				    
 				    &:nth-child(1) {
-					    top: 4px;
+					    top: 6px;
 				    }
 
 				    &:nth-child(2) {
-					    top: 16px;
+					    top: 13px;
 				    }
 				    
 				    &:nth-child(3) {
-					    bottom: 4px;
+					    bottom: 6px;
 				    }
-				    				    
 			    }
 				
 			&.clicked {
 				span {
 					&:nth-child(1) {
 						top: 4px;
-						transform: translate(0px, 12px) rotate(-45deg);
+						transform: translate(0px, 9px) rotate(-45deg);
 					}
 			
 					&:nth-child(2) {
@@ -221,7 +228,7 @@ header.site-header {
 					
 					&:nth-child(3) {
 						bottom: 4px;
-						transform: translate(0px, -12px) rotate(45deg);
+						transform: translate(0px, -9px) rotate(45deg);
 					}
 				}				
 			}
