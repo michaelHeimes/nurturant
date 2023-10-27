@@ -3,7 +3,6 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-
 .error404 {
 	main {
 		padding-top: 5rem;
@@ -96,6 +95,10 @@ POSTS & CONTENT STYLES
 // Entry content  
 .entry-content {
 	
+	figure {
+		margin-bottom: 1rem;
+	}
+	
 	img {
 		max-width: 100%;
 		height: auto;
@@ -127,9 +130,35 @@ POSTS & CONTENT STYLES
 		background: #eee;
 		border: 1px solid #cecece;
 		padding: 10px;
+	}
+	
+&.default-page {
+	.module {
+		padding-top: rem-calc(32);
+		padding-bottom: rem-calc(32);
+		@include breakpoint(medium) {
+			padding-top: rem-calc(22);
+			padding-bottom: rem-calc(22);
 		}
-
+		
+	&:last-child {
+		padding-bottom: rem-calc(44);
+		@include breakpoint(medium) {
+			padding-bottom: rem-calc(64);
+		}
+	}
+		
+	&.ntm {
+		padding-top: 0;
+	}
+	&.nbm {
+		padding-bottom: 0;
+	}
+		
+	}
 } 
+
+}
 
 .wp-caption {
 	max-width: 100%;

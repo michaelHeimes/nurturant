@@ -1,10 +1,5 @@
 .cta-yellow-background-wicon-links {
-	padding-top: rem-calc(32);
 	background-image: linear-gradient(to bottom, $color-yellow, $color-lime);
-	@include breakpoint(medium) {
-		padding-top: rem-calc(53.5);
-		padding-bottom: rem-calc(11.5);
-	}
 	h2 {
 		margin-bottom: rem-calc(33);
 	}
@@ -84,5 +79,15 @@
 	}
 	
 	}
+	
+}
 
+body .entry-content.default-page {
+	.cta-yellow-background-wicon-links {
+		padding-top: rem-calc(32);
+		@include breakpoint(medium) {
+			padding-top: rem-calc(53.5);
+			padding-bottom: rem-calc(11.5);
+		}
+	}
 }

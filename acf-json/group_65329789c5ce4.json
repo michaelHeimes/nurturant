@@ -1,10 +1,10 @@
 {
     "key": "group_65329789c5ce4",
-    "title": "Page Modules",
+    "title": "Modules",
     "fields": [
         {
             "key": "field_6532978af4586",
-            "label": "Page Modules",
+            "label": "Modules",
             "name": "page_modules",
             "aria-label": "",
             "type": "flexible_content",
@@ -208,6 +208,70 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_653bc6e0a6cc6": {
+                    "key": "layout_653bc6e0a6cc6",
+                    "name": "image_slider",
+                    "label": "Image Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_653bc6e0a6cc8",
+                            "label": "Image Slider",
+                            "name": "image_slider_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_653bc69a3a160"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_653bbcacace89": {
+                    "key": "layout_653bbcacace89",
+                    "name": "video_embed_wcaption",
+                    "label": "Video Embed w\/Caption",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_653bbcb3ace8c",
+                            "label": "Video Embed w\/Caption",
+                            "name": "video_embed_clone",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_653bbb9358f8d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -235,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1697817389
+    "modified": 1698416381
 }

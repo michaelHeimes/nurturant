@@ -1,13 +1,9 @@
-.wysiwyg-editor {
-		
-	.responsive-embed {
-		margin-bottom: 0;
-	}
-
+.video-embed {
+	
 }
 
 .home .entry-content.default-page {
-	.wysiwyg-editor {
+	.video-embed {
 		padding-top: rem-calc(41.5);
 		padding-bottom: rem-calc(22);
 		@include breakpoint(medium) {
@@ -16,11 +12,12 @@
 		}
 		
 	&.ntm {
-			padding-top: 0;
-		}
+		padding-top: 0;
+	}
 	&.nbm {
 		padding-bottom: 0;
 	}
+
 		
 	}
 }

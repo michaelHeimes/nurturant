@@ -41,6 +41,14 @@ ul,
 ol {
 	
 }
+.wp-caption {
+	padding: 0;
+	background-color: transparent;
+	.wp-caption-text {
+		padding: .45rem 0 0;
+		font-size: 0.9rem;
+	}
+}
 a {
 	color: $color-magenta;
 &:hover {

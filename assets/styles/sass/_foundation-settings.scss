@@ -525,7 +525,7 @@ $offcanvas-sizes: (
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
+$offcanvas-background: $white;
 $offcanvas-shadow: 0 0 10px rgba($black, 0.7);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
@@ -746,7 +746,7 @@ $prototype-text-overflow: ellipsis;
 // 46. Responsive Embed
 // --------------------
 
-$responsive-embed-margin-bottom: rem-calc(16);
+$responsive-embed-margin-bottom: rem-calc(0);
 $responsive-embed-ratios: (
   default: 4 by 3,
   widescreen: 16 by 9,

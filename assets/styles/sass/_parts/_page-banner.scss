@@ -1,0 +1,6 @@
+.page-banner {
+	padding-top: rem-calc(35);
+	@include breakpoint(medium) {
+		padding-top: rem-calc(75);
+	}
+}

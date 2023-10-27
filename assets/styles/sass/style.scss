@@ -79,7 +79,7 @@ $FontPath: "../fonts/metropolis/Webfonts/";
 // @include foundation-accordion;
 //@include foundation-media-object;
 //@include foundation-orbit;
-// @include foundation-responsive-embed;
+@include foundation-responsive-embed;
 //@include foundation-tabs;
 //@include foundation-thumbnail;
 // Menu-based containers
@@ -127,5 +127,8 @@ $FontPath: "../fonts/metropolis/Webfonts/";
 @import "_modules/copy_left_image_right";
 @import "_modules/cta-copy-wbuttons-links";
 @import "_modules/logo-slider";
+@import "_modules/video-embed";
+
+@import "_parts/page-banner";
 
 @import "_pages/team";

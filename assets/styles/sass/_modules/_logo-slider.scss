@@ -1,12 +1,12 @@
-.logo-slider {
-	padding-top: rem-calc(41.6);
-	padding-bottom: rem-calc(65.6);
-	@include breakpoint(medium) {
-		padding-top: rem-calc(79);
+.logo-slider,
+.image-slider {
+	.header {
+		padding-bottom: rem-calc(23);
 	}
-	.logo-slider-swiper {
+	.logo-slider-swiper,
+	.image-slider-swiper {
 		padding: 0 2rem;
-		.swiper-slide {
+		.swiper-slide.logo-slide {
 			img {
 				max-height: 122px;
 				width: auto;
@@ -41,6 +41,17 @@
 				background-color: $color-magenta;
 			}
 			}
+		}
+	}
+}
+
+.home .entry-content.default-page {
+	.logo-slider,
+	.image-slider {
+		padding-top: rem-calc(41.6);
+		padding-bottom: rem-calc(65.6);
+		@include breakpoint(medium) {
+			padding-top: rem-calc(79);
 		}
 	}
 }

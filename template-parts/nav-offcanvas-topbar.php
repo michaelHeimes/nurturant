@@ -42,7 +42,7 @@
 						
 		</div>
 		<div class="top-bar-right show-for-tablet">
-			<div class="grid-x align-justify align-middle h-100">
+			<div class="grid-x grid-padding-x align-justify align-middle h-100">
 				<div class="cell auto">
 					<nav>
 						<?php nurturant_top_nav();?>

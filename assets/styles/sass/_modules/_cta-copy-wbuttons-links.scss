@@ -32,3 +32,22 @@
 }
 	
 }
+
+.home .entry-content.default-page {
+	.cta-copy-wbuttons-links {
+		margin-top: rem-calc(40);
+		margin-bottom: rem-calc(40);
+		@include breakpoint(medium) {
+			margin-top: rem-calc(80);
+			margin-bottom: rem-calc(80);
+		}
+		
+		&.ntm {
+			margin-top: 0;
+		}
+		&.nbm {
+			margin-bottom: 0;
+		}
+		
+	}
+}
