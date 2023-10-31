@@ -1,0 +1,130 @@
+body .wFormContainer {
+	padding-top: rem-calc(29);
+	.wFormHeader {
+		display: none;
+	}
+	.wForm {
+		padding: 0;
+		.wFormTitle {
+			display: none;
+			padding: 0 !important;
+		}
+		form {
+			padding: 0;
+			.htmlSection,
+			.field-container-D {
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			.htmlSection .htmlContent,
+			.label {
+				color: $black !important;
+				border: 0;
+				font-size: rem-calc(14.4) !important;
+				line-height: 1;
+			}
+			.htmlSection .htmlContent {
+				margin-bottom: rem-calc(28);
+			}
+			.label {
+				transform: translateY(3px);
+			}
+			.label.preField {
+				
+			}
+			.inputWrapper {
+				width: 100%;	
+				margin-bottom: 1.2rem;
+				input:not([type='file']):not([type='checkbox']):not([type="submit"]),
+				textarea {
+					width: 100% !important;
+					margin: 4px 0 0 !important;
+					padding: 10px 635px 10px 16px !important;
+					border-radius: 16px !important;
+					background-color: $color-pale-blue !important;
+					box-shadow: 0 0 0;	
+					height: 44px !important;
+					border: solid 1px transparent !important;
+					&:focus {
+						border: solid 1px $color-purple !important;
+					}
+				}
+				textarea,
+				textarea.required:not(readonly):focus{
+					height: 168px !important;
+					&:focus {
+						border: solid 1px $color-purple !important;
+					}
+				}
+				input[type='file'] {
+					margin-left: -8px;
+					&::file-selector-button {
+						background-color: $color-lime;
+
+					}
+				}
+				.choices.vertical {
+					.oneChoice {
+						display: flex;
+						padding-left: 5px;
+						label {
+							position: relative;
+							&:before,
+							&:after {
+								content: '';
+								display: block;
+								width: 17px;
+								height: 17px;
+								position: absolute;
+								top: 0;
+								left: -24px;
+							}
+							&:before {
+								border: 2px solid $black;
+								border-radius: 2px;
+								background-color: $white;
+							}
+							&:after {
+								opacity: 0;
+								background-image: url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='17px' height='17px' viewBox='0 0 17 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EPath%3C/title%3E%3Cdefs%3E%3Cfilter id='filter-1'%3E%3CfeColorMatrix in='SourceGraphic' type='matrix' values='0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 0 0.000000 0 0 0 1.000000 0'%3E%3C/feColorMatrix%3E%3C/filter%3E%3C/defs%3E%3Cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='check_box_FILL0_wght300_GRAD0_opsz24' filter='url(%23filter-1)'%3E%3Cg transform='translate(0.000000, -0.000000)'%3E%3Cpath d='M7.099975,12.3538 L13.823025,5.63075 L12.7692,4.576925 L7.099975,10.24615 L4.249975,7.39615 L3.19615,8.449975 L7.099975,12.3538 Z M1.8077,16.99995 C1.30256667,16.99995 0.875,16.82495 0.525,16.47495 C0.175,16.12495 -8.8817842e-16,15.6973833 -8.8817842e-16,15.19225 L-8.8817842e-16,1.8077 C-8.8817842e-16,1.30256667 0.175,0.875 0.525,0.525 C0.875,0.175 1.30256667,0 1.8077,0 L15.19225,0 C15.6973833,0 16.12495,0.175 16.47495,0.525 C16.82495,0.875 16.99995,1.30256667 16.99995,1.8077 L16.99995,15.19225 C16.99995,15.6973833 16.82495,16.12495 16.47495,16.47495 C16.12495,16.82495 15.6973833,16.99995 15.19225,16.99995 L1.8077,16.99995 Z M1.8077,15.499975 L15.19225,15.499975 C15.2691833,15.499975 15.3397083,15.467925 15.403825,15.403825 C15.467925,15.3397083 15.499975,15.2691833 15.499975,15.19225 L15.499975,1.8077 C15.499975,1.73076667 15.467925,1.66024167 15.403825,1.596125 C15.3397083,1.532025 15.2691833,1.499975 15.19225,1.499975 C12.0324379,1.499975 9.66257878,1.499975 8.08267271,1.499975 C6.68823433,1.499975 4.59657676,1.499975 1.8077,1.499975 C1.73076667,1.499975 1.66024167,1.532025 1.596125,1.596125 C1.532025,1.66024167 1.499975,1.73076667 1.499975,1.8077 L1.499975,15.19225 C1.499975,15.2691833 1.532025,15.3397083 1.596125,15.403825 C1.66024167,15.467925 1.73076667,15.499975 1.8077,15.499975 Z M1.537475,1.499975 L1.537475,15.499975 L1.537475,1.499975 Z' id='Shape' fill='%23000000' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+							}
+						}
+						input {
+							opacity: 0;
+							&:checked+label:after {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+			.oneField[role="group"] .inputWrapper {
+				margin-bottom: 0;
+			}
+			input[type="submit"],
+			.inputWrapper input[type='file']::file-selector-button {
+				border: 0;
+				margin: 8px 8px 12px;
+				padding: 13px 17.41px 11px !important;
+				border-radius: 16px;
+				height: auto;
+				line-height: .5;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			}
+			.inputWrapper input[type='file'] {
+				margin-top: -7px;
+			}
+			.actions {
+				text-align: right;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				input[type="submit"] {
+					background-color: $color-orange;
+				}
+			}
+		}
+	}
+}
