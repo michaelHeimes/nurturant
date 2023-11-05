@@ -30,7 +30,7 @@
     </header><!-- .entry-header -->
     <?php endif?>
 		
-	<div class="entry-content default-page<?php if( get_field('hide_title') == 'true' ):?> no-title<?php endif;?>">
+	<div class="entry-content default-page<?php if( get_field('hide_title') == 'true' && !is_front_page() ):?> no-title<?php endif;?>">
 	    <?php get_template_part('template-parts/modules');?>
 	</div><!-- .entry-content -->
 
