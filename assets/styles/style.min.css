@@ -8826,64 +8826,70 @@ body .entry-content.default-page .copy-left-image-right {
   padding-bottom: 0;
 }
 
-.page-banner {
+.people h2 {
+  margin-bottom: 2rem;
+  color: #0098a4;
+}
+.people article {
   padding-top: 2.1875rem;
 }
 @media print, screen and (min-width: 40em) {
-  .page-banner {
+  .people article {
     padding-top: 4.6875rem;
   }
 }
-
-.page-template-page-team article {
-  padding-top: 2.1875rem;
-}
-@media print, screen and (min-width: 40em) {
-  .page-template-page-team article {
-    padding-top: 4.6875rem;
-  }
-}
-.page-template-page-team article header.entry-header {
+.people article header.entry-header {
   padding-bottom: 1.375rem;
 }
 @media print, screen and (min-width: 40em) {
-  .page-template-page-team article header.entry-header {
+  .people article header.entry-header {
     padding-bottom: 3.375rem;
   }
 }
-.page-template-page-team .team-member {
+.people .team-member {
   margin-bottom: 1.375rem;
 }
 @media print, screen and (min-width: 40em) {
-  .page-template-page-team .team-member {
+  .people .team-member {
     margin-bottom: 3rem;
   }
 }
 @media print, screen and (max-width: 56.24875em) {
-  .page-template-page-team .team-member .top {
+  .people .team-member .top {
     margin-bottom: 0.9375rem;
   }
 }
 @media print, screen and (min-width: 56.25em) {
-  .page-template-page-team .team-member .top {
+  .people .team-member .top {
     padding-bottom: 23px;
   }
 }
-.page-template-page-team .team-member .top .photo-wrap .inner {
+.people .team-member .top .photo-wrap .inner {
   border-radius: 100%;
 }
 @media print, screen and (max-width: 56.24875em) {
-  .page-template-page-team .team-member .top .photo-wrap .inner {
+  .people .team-member .top .photo-wrap .inner {
     margin-bottom: 1rem;
   }
-  .page-template-page-team .team-member .top .photo-wrap .inner img {
+  .people .team-member .top .photo-wrap .inner img {
     max-width: 136px;
   }
 }
-.page-template-page-team .team-member .top h2.h3 {
+.people .team-member .top h2.h3 {
   margin-bottom: 0.355em;
 }
-.page-template-page-team .team-member .top p {
+.people .team-member .top p {
   margin-bottom: 0;
+}
+
+.page-banner,
+.no-title {
+  padding-top: 2.1875rem;
+}
+@media print, screen and (min-width: 40em) {
+  .page-banner,
+  .no-title {
+    padding-top: 4.6875rem;
+  }
 }
 /*# sourceMappingURL=style.min.css.map */

@@ -24,6 +24,8 @@
 					get_template_part('template-parts/modules/image_slider');
 					elseif( get_row_layout() == 'video_embed_wcaption' ):
 					get_template_part('template-parts/modules/video');
+					elseif( get_row_layout() == 'people' ):
+					get_template_part('template-parts/modules/people');
 				endif;
 	
 			endwhile;

@@ -1,4 +1,8 @@
-.page-template-page-team {
+.people {
+	h2 {
+		margin-bottom: 2rem;
+		color: $color-turquoise;
+	}
 	article {
 		padding-top: rem-calc(35);
 		@include breakpoint(medium) {
