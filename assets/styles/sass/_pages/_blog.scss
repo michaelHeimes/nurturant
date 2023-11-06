@@ -135,6 +135,10 @@
 	h5 {
 		color: $primary-color;
 	}
+	
+	.thumbnail {
+		margin-bottom: 1.5rem;
+	}
 		
 	.wp-block-image {
 		margin-top: 2.3rem;
@@ -206,6 +210,10 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;	
+				border: 2px solid $color-purple;
+				svg {
+					transform: scale(1.25);
+				}
 			}
 			
 		}

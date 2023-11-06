@@ -8883,12 +8883,14 @@ body .entry-content.default-page .copy-left-image-right {
 }
 
 .blog .site,
+.single-post .site,
 .page-banner,
 .no-title {
   padding-top: 2.1875rem;
 }
 @media print, screen and (min-width: 40em) {
   .blog .site,
+  .single-post .site,
   .page-banner,
   .no-title {
     padding-top: 4.6875rem;
@@ -9075,6 +9077,9 @@ body .entry-content.default-page .copy-left-image-right {
 .single-post h5 {
   color: #1779ba;
 }
+.single-post .thumbnail {
+  margin-bottom: 1.5rem;
+}
 .single-post .wp-block-image {
   margin-top: 2.3rem;
   margin-bottom: 2.3rem;
@@ -9148,5 +9153,10 @@ body .entry-content.default-page .copy-left-image-right {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 2px solid #771c7d;
+}
+.single-post footer.article-footer .a2a_kit a svg {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 /*# sourceMappingURL=style.min.css.map */
