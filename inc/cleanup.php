@@ -18,7 +18,7 @@ function nurturant_start() {
     add_filter('gallery_style', 'nurturant_gallery_style');
 
     // cleaning up excerpt
-    add_filter('excerpt_more', 'nurturant_excerpt_more');
+    //add_filter('excerpt_more', 'nurturant_excerpt_more');
 
 } /* end joints start */
 
