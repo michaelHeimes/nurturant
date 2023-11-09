@@ -15,7 +15,27 @@
 		<p class="byline">
 			<?php echo get_the_time( __('F j, Y') );?>
 			<span>|</span>
-			<?php echo get_the_category_list(', ');?>
+			<?php
+			if( is_singular('news') ) {
+				
+				$terms = get_the_terms(get_the_ID(), 'news-category');				
+				// Check if terms exist
+				if ($terms && !is_wp_error($terms)) {
+					$term_links = array();
+				
+					// Loop through each term
+					foreach ($terms as $term) {
+						// Generate a link to the term archive page
+						$term_links[] = '<a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a>';
+					}
+				
+					// Output the term links separated by commas
+					echo implode(', ', $term_links);
+				}
+			} else {
+				get_the_category_list(', ');
+			}
+			?>
 		</p>	
 		<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 	</header> <!-- end article header -->
@@ -23,7 +43,7 @@
 
 	<section class="entry-content" itemprop="text">
 		<div class="thumbnail text-center">
-			<?php the_post_thumbnail('large'); ?>
+			<?php the_post_thumbnail('blog-post-featured'); ?>
 		</div>
 		<?php
 		the_content(

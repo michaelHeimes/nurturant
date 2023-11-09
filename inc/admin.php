@@ -25,7 +25,7 @@ add_filter('admin_footer_text', 'nurturant_custom_admin_footer');
 	        $in['block_formats'] = "Paragraph=p; Heading 2=h2; Heading 3=h3; Heading 4=h4; Heading 5=h5; Heading 6=h6;Preformatted=pre";
 	    return $in;
 	}
-	add_filter( 'tiny_mce_before_init', 'dg_tiny_mce_remove_h1' );
+	//add_filter( 'tiny_mce_before_init', 'dg_tiny_mce_remove_h1' );
 
 
 /**
@@ -39,7 +39,7 @@ add_filter('admin_footer_text', 'nurturant_custom_admin_footer');
 		remove_meta_box('dashboard_primary', 'dashboard', 'normal');
 		remove_meta_box('dashboard_secondary', 'dashboard', 'normal');
 	}
-	add_action('admin_init', 'remove_dashboard_widgets');
+	//add_action('admin_init', 'remove_dashboard_widgets');
 
 
 	// add styleselect to editor
@@ -67,14 +67,14 @@ add_filter('admin_footer_text', 'nurturant_custom_admin_footer');
 		
 		return $init_array;  
 	} 
-	add_filter( 'tiny_mce_before_init', 'add_styleselect_classes' ); 
+	//add_filter( 'tiny_mce_before_init', 'add_styleselect_classes' ); 
 
 
 	// add editor-style.css
 	function theme_editor_style() {
 		add_editor_style( get_template_directory_uri() . '/assets/styles/style.min.css' );
 	}
-	add_action('init', 'theme_editor_style');
+	//add_action('init', 'theme_editor_style');
 
 
 	// remove revisions meta box and recreate on right side for all post types
@@ -99,4 +99,22 @@ add_filter('admin_footer_text', 'nurturant_custom_admin_footer');
 		add_meta_box('revisionssidediv2', __('Revisions'), 'post_revisions_meta_box', 'post', 'side', 'low');
 		
 	}
-	add_action('do_meta_boxes','relocate_revisions_metabox', 30);
+	//add_action('do_meta_boxes','relocate_revisions_metabox', 30);
+	
+	
+	// Rename POSTS, ACTIVITIES
+	function rename_posts_label() {
+		global $menu;
+	
+		// Specify the new name for the "Posts" label
+		$new_posts_label = 'Activities';
+	
+		// Find the index of "Posts" in the menu array
+		$posts_index = array_search('edit.php', array_column($menu, '2'));
+	
+		if ($posts_index !== false) {
+			// Change the name in the admin menu
+			$menu[$posts_index][0] = $new_posts_label;
+		}
+	}
+	add_action('admin_menu', 'rename_posts_label');

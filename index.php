@@ -17,7 +17,11 @@ get_header(); ?>
 				<header class="banner cell small-12">
 					<div class="top grid-x grid-padding-x align-middle">
 						<div class="cell small-12 medium-auto">
-							<h1>Blog</h1>
+							<?php if ( is_post_type_archive('news') ):?>
+								<h1>News</h1>
+							<?php else:?>
+								<h1>Activities</h1>
+							<?php endif;?>
 						</div>
 						<div class="cell small-12 medium-shrink grid-x align-middle">
 							<form method="get" action="/" _lpchecked="1">
@@ -36,19 +40,23 @@ get_header(); ?>
 					
 					<div class="grid-x grid-padding-x align-middle">
 						<nav class="cell small-12">
-							<?php 
-							$categories = get_categories(array('exclude' => get_cat_ID('Uncategorized')));
-							
-							if ($categories) {
-								echo '<div class="categories grid-x grid-padding-x align-center">';
-								foreach ($categories as $category) {
-									echo '<div class="cell shrink">';
-									echo '<a class="button" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
-									echo '</div>';
-								}
-								echo '</div>';
+							<?php 						
+							if ( is_post_type_archive('news') ) {
+							 	$categories = get_terms( 'news-category', array( 'hide_empty' => true, 'parent' => 0 ) );
+							} else {
+								$categories = get_categories(array('exclude' => get_cat_ID('Uncategorized')));
 							}
-							?>
+						 	
+						 	if ($categories) {
+							 	echo '<div class="categories grid-x grid-padding-x align-center">';
+							 	foreach ($categories as $category) {
+								 	echo '<div class="cell shrink">';
+								 	echo '<a class="button" href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+								 	echo '</div>';
+							 	}
+							 	echo '</div>';
+						 	}
+						 	?>
 						</nav>
 					</div>
 					

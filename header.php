@@ -22,9 +22,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=BioRhyme&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
+	
+	<?php $background_pattern_image = get_field('background_pattern_image') ?? null;?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); if($background_pattern_image) { echo 'style="background-image: url(' . $background_pattern_image . '"';};?>>
 	<?php wp_body_open(); ?>
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nurturant' ); ?></a>
 		

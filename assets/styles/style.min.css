@@ -7308,6 +7308,11 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 Stylesheet: Global Stylesheet
 
 *************************************************/
+body {
+  background-size: auto;
+  background-position: center;
+}
+
 .error404 main {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -8024,6 +8029,7 @@ a:hover {
 
 header.site-header {
   position: relative;
+  background-color: white;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -8722,7 +8728,7 @@ body .entry-content.default-page .copy-left-image-right {
 .logo-slider .image-slider-swiper .swiper-nav,
 .image-slider .logo-slider-swiper .swiper-nav,
 .image-slider .image-slider-swiper .swiper-nav {
-  background: white;
+  background: transparent;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -9070,31 +9076,31 @@ body .entry-content.default-page .copy-left-image-right {
   text-decoration: none;
 }
 
-.single-post h1,
-.single-post h2,
-.single-post h3,
-.single-post h4,
-.single-post h5 {
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5 {
   color: #1779ba;
 }
-.single-post .thumbnail {
+.single .thumbnail {
   margin-bottom: 1.5rem;
 }
-.single-post .wp-block-image {
+.single .wp-block-image {
   margin-top: 2.3rem;
   margin-bottom: 2.3rem;
 }
-.single-post p.byline {
+.single p.byline {
   padding-top: 2rem;
   padding-bottom: 0.2rem;
   margin-bottom: 0;
 }
-.single-post .wp-block-image figcaption {
+.single .wp-block-image figcaption {
   font-size: 0.75rem;
   color: #767676;
 }
-.single-post blockquote,
-.single-post blockquote p {
+.single blockquote,
+.single blockquote p {
   border: 0;
   text-align: center;
   font-size: 2.8125rem;
@@ -9104,29 +9110,29 @@ body .entry-content.default-page .copy-left-image-right {
   margin: auto;
   padding: 1.45rem 0 2.2rem;
 }
-.single-post .wp-block-buttons {
+.single .wp-block-buttons {
   padding-top: 5.35rem;
 }
-.single-post .wp-block-buttons .wp-block-button {
+.single .wp-block-buttons .wp-block-button {
   display: block;
   text-align: center;
   width: 100%;
 }
-.single-post h1.entry-title.single-title {
+.single h1.entry-title.single-title {
   margin-bottom: 0.62em;
 }
-.single-post footer.article-footer {
+.single footer.article-footer {
   padding-top: 2.1rem;
   padding-bottom: 6.4rem;
   margin-top: 3.6rem;
 }
-.single-post footer.article-footer .footer-header {
+.single footer.article-footer .footer-header {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9375rem;
   padding-bottom: 0.9rem;
 }
-.single-post footer.article-footer .a2a_kit {
+.single footer.article-footer .a2a_kit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9137,7 +9143,7 @@ body .entry-content.default-page .copy-left-image-right {
       -ms-flex-align: center;
           align-items: center;
 }
-.single-post footer.article-footer .a2a_kit a {
+.single footer.article-footer .a2a_kit a {
   display: block;
   margin: 8px;
   width: 33px;
@@ -9155,7 +9161,7 @@ body .entry-content.default-page .copy-left-image-right {
           align-items: center;
   border: 2px solid #771c7d;
 }
-.single-post footer.article-footer .a2a_kit a svg {
+.single footer.article-footer .a2a_kit a svg {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
 }
