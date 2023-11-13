@@ -9,7 +9,6 @@
  
  $category = get_queried_object();
  $category_name = $category->name;
- 
 get_header(); ?>
 			 
 	 <div class="content">
@@ -21,9 +20,11 @@ get_header(); ?>
 					 <div class="top grid-x grid-padding-x align-middle">
 						 <div class="cell small-12 medium-auto">
 							<?php if ( is_post_type_archive('news') ):?>
-							 	<h1>News</h1>
+								<h1>News</h1>
+							<?php elseif ( is_tax('news-category') ):?>
+							 	<h1><?= $category_name;?></h1>
 						 	<?php else:?>
-							 	<h1>Activities</h1>
+							 	<h1><?= $category_name;?></h1>
 						 	<?php endif;?>
 						 </div>
 						 <div class="cell small-12 medium-shrink grid-x align-middle">
@@ -44,8 +45,8 @@ get_header(); ?>
 					 <div class="grid-x grid-padding-x align-middle">
 						<nav class="cell small-12">
 							<?php 						
-							if ( is_post_type_archive('news') ) {
-							 	$categories = get_terms( 'news-category', array( 'hide_empty' => true, 'parent' => 0 ) );
+							if ( is_tax('news-category') ) {
+								 $categories = get_terms( 'news-category', array( 'hide_empty' => true, 'parent' => 0 ) );
 							} else {
 								$categories = get_categories(array('exclude' => get_cat_ID('Uncategorized')));
 							}

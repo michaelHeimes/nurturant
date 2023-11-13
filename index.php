@@ -42,6 +42,7 @@ get_header(); ?>
 						<nav class="cell small-12">
 							<?php 						
 							if ( is_post_type_archive('news') ) {
+								echo 'foo';
 							 	$categories = get_terms( 'news-category', array( 'hide_empty' => true, 'parent' => 0 ) );
 							} else {
 								$categories = get_categories(array('exclude' => get_cat_ID('Uncategorized')));

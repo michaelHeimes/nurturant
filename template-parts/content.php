@@ -14,13 +14,14 @@
 	<header class="article-header text-center">	
 		<p class="byline">
 			<?php echo get_the_time( __('F j, Y') );?>
-			<span>|</span>
 			<?php
 			if( is_singular('news') ) {
 				
-				$terms = get_the_terms(get_the_ID(), 'news-category');				
+				$terms = get_the_terms(get_the_ID(), 'news-category');						
+
 				// Check if terms exist
 				if ($terms && !is_wp_error($terms)) {
+					echo '<span>|</span>&nbsp;';
 					$term_links = array();
 				
 					// Loop through each term
@@ -33,7 +34,8 @@
 					echo implode(', ', $term_links);
 				}
 			} else {
-				get_the_category_list(', ');
+				echo '<span>|</span>&nbsp;';
+				echo get_the_category_list(', ');
 			}
 			?>
 		</p>	
@@ -72,7 +74,7 @@
 
 	<footer class="article-footer">
 		
-		<div class="footer-header text-center">Share This Post</div>
+		<h5 class="footer-header text-center color-purple">Share This Post</h5>
 		
 		<div class="a2a_kit a2a_default_style">
 			<a class="a2a_button_facebook" href="#">

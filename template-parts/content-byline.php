@@ -10,6 +10,8 @@
 		// Get the terms (categories) assigned to the current post in the 'news-category' taxonomy
 		$terms = get_the_terms(get_the_ID(), 'news-category');
 		
+		var_dump($terms);
+		
 		// Check if terms exist
 		if ($terms && !is_wp_error($terms)) {
 			$term_links = array();
