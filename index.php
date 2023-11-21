@@ -40,9 +40,9 @@ get_header(); ?>
 					
 					<div class="grid-x grid-padding-x align-middle">
 						<nav class="cell small-12">
-							<?php 						
+							<?php
+							$categories = [];	 						
 							if ( is_post_type_archive('news') ) {
-								echo 'foo';
 							 	$categories = get_terms( 'news-category', array( 'hide_empty' => true, 'parent' => 0 ) );
 							} else {
 								$categories = get_categories(array('exclude' => get_cat_ID('Uncategorized')));

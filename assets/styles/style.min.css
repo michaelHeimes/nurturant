@@ -8889,6 +8889,7 @@ body .entry-content.default-page .copy-left-image-right {
 }
 
 .blog .site,
+.archive .site,
 .single-post .site,
 .page-banner,
 .no-title {
@@ -8896,6 +8897,7 @@ body .entry-content.default-page .copy-left-image-right {
 }
 @media print, screen and (min-width: 40em) {
   .blog .site,
+  .archive .site,
   .single-post .site,
   .page-banner,
   .no-title {
